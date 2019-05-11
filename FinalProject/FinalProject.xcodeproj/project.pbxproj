@@ -15,6 +15,7 @@
 		2DD3D8C92286347500FD2633 /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D8C82286347500FD2633 /* FinalProjectUITests.swift */; };
 		2DD3D8D722863C9B00FD2633 /* converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D8D622863C9B00FD2633 /* converter.swift */; };
 		2DD3D8D922863CCF00FD2633 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D8D822863CCF00FD2633 /* CalculatorViewController.swift */; };
+		2DD3D8DB2286614F00FD2633 /* calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D8DA2286614F00FD2633 /* calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2DD3D8CA2286347500FD2633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD3D8D622863C9B00FD2633 /* converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = converter.swift; sourceTree = "<group>"; };
 		2DD3D8D822863CCF00FD2633 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		2DD3D8DA2286614F00FD2633 /* calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2DD3D8B42286347500FD2633 /* Info.plist */,
 				2DD3D8D622863C9B00FD2633 /* converter.swift */,
 				2DD3D8D822863CCF00FD2633 /* CalculatorViewController.swift */,
+				2DD3D8DA2286614F00FD2633 /* calculator.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD3D8A92286347000FD2633 /* AppDelegate.swift in Sources */,
+				2DD3D8DB2286614F00FD2633 /* calculator.swift in Sources */,
 				2DD3D8D922863CCF00FD2633 /* CalculatorViewController.swift in Sources */,
 				2DD3D8D722863C9B00FD2633 /* converter.swift in Sources */,
 			);
