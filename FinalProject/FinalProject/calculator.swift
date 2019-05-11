@@ -17,7 +17,7 @@ class Calculator {
     var isNegative: Bool = false
     var isDouble: Bool = false
     
-    func appendInput(_ newInput: String) -> String {
+    func appendInput(_ newInput: String) {
         // this function now appends numbers and the decimal point
         if (newInput == "." && isDouble == true) {
             // if inputString already has a decimal, do nothing
@@ -28,17 +28,28 @@ class Calculator {
             inputString = inputString + newInput
 
         }
-        return inputString
+        //return inputString
     }
     
-    func changeSign() -> Double {
+    func changeSign(){
         
         // TO DO: fix this functionality since I'm storing the data as a String and not a double now
         
+        if (isNegative == true) {
+            isNegative = false
+        } else {
+            isNegative = true
+        }
+        //inputNumber = inputNumber * -1
         
-        inputNumber = inputNumber * -1
-        
-        return inputNumber
+        //return inputNumber
+    }
+    
+    func getInputString() -> String {
+        if (isNegative == true){
+            return "-\(inputString)"
+        }
+        return inputString
     }
     
     func clear() {
@@ -46,5 +57,32 @@ class Calculator {
         self.inputString = ""
         self.isNegative = false
         self.isDouble = false
+    }
+    
+    func convert() -> String {
+        if (isNegative == true){
+            inputNumber = (Double(inputString)! * -1)
+        } else {
+            inputNumber = Double(inputString)!
+        }
+        
+        switch converter!.inputUnit {
+        case "°F":
+            // convert from F to C
+            return "\(inputNumber)"
+        case "°C":
+            // convert from C to F
+            return "\(inputNumber)"
+        case "mi":
+            // convert from mi to km
+            return "\(inputNumber)"
+        case "km":
+            // convert from km to mi
+            return "\(inputNumber)"
+        default:
+            return ""
+            
+        }
+        
     }
 }
