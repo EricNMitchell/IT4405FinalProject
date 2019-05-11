@@ -18,7 +18,7 @@ class Calculator {
     var isDouble: Bool = false
     
     func appendInput(_ newInput: String) {
-        // this function now appends numbers and the decimal point
+        // this function appends numbers and the decimal point
         if (newInput == "." && isDouble == true) {
             // if inputString already has a decimal, do nothing
         } else if (newInput == "." && isDouble == false){
@@ -26,23 +26,15 @@ class Calculator {
             inputString = inputString + newInput
         } else {
             inputString = inputString + newInput
-
         }
-        //return inputString
     }
     
     func changeSign(){
-        
-        // TO DO: fix this functionality since I'm storing the data as a String and not a double now
-        
         if (isNegative == true) {
             isNegative = false
         } else {
             isNegative = true
         }
-        //inputNumber = inputNumber * -1
-        
-        //return inputNumber
     }
     
     func getInputString() -> String {
@@ -59,7 +51,8 @@ class Calculator {
         self.isDouble = false
     }
     
-    func convert() -> String {
+    func convert() -> Double {
+        // this function returns output data
         if (isNegative == true){
             inputNumber = (Double(inputString)! * -1)
         } else {
@@ -69,18 +62,18 @@ class Calculator {
         switch converter!.inputUnit {
         case "°F":
             // convert from F to C
-            return "\(inputNumber)"
+            return ((inputNumber-32)*(5/9))
         case "°C":
             // convert from C to F
-            return "\(inputNumber)"
+            return ((inputNumber*(9/5))+32)
         case "mi":
             // convert from mi to km
-            return "\(inputNumber)"
+            return (inputNumber * 1.609334)
         case "km":
             // convert from km to mi
-            return "\(inputNumber)"
+            return (inputNumber / 1.609334)
         default:
-            return ""
+            return 0.0
             
         }
         
